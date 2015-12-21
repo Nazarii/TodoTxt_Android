@@ -24,7 +24,7 @@ public class DbHelper extends SQLiteOpenHelper {
 
         final String SQL_CREATE_EVENT_TABLE = "CREATE TABLE " + TodoItem.TABLE_NAME + " (" +
                 TodoItem._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
-                TodoItem.COLUMN_STATUS + " TEXT NOT NULL," +
+                TodoItem.COLUMN_STATUS + " BOOLEAN," +
                 TodoItem.COLUMN_NAME + " TEXT NOT NULL ON CONFLICT REPLACE);";
         sqLiteDatabase.execSQL(SQL_CREATE_EVENT_TABLE);
     }
